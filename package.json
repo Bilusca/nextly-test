@@ -1,0 +1,12 @@
+{
+  "name": "nextly-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Lucas Assis Vieira <lucasav2005@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "palindrome": "node ./programming/isPalindrome.js",
+    "search": "node ./programming/phoneBookSearch.js",
+    "mspaint": "node ./programming/mspaint.js"
+  }
+}

@@ -1,0 +1,32 @@
+# Table SUPPLIER
+
+| SUPPLIER_CODE | SUPPLIER_NAME | CITY |
+|---------------|---------------|------|
+
+# Table PART
+
+| PART_CODE     | NAME_PART | PRICE |
+|---------------|-----------|-------|
+
+# Table CAR
+
+| CAR_CODE | NAME_CAR | TYPE |
+|----------|----------|------|
+
+# Table SUPPLY
+
+| SUPPLIER_CODE | PART_CODE | CAR_CODE |
+|---------------|-----------|----------|
+
+------
+
+```sql
+SELECT SUPPLIER.SUPPLIER_NAME, PART.PRICE
+FROM SUPPLY
+INNER JOIN SUPPLIER ON SUPPLY.SUPPLIER_CODE = SUPPLIER.SUPPLIER_CODE
+INNER JOIN PART ON SUPPLY.PART_CODE = PART.PART_CODE
+INNER JOIN CAR ON SUPPLY.CAR_CODE = CAR.CAR_CODE
+WHERE SUPPLIER.CITY = "VITORIA"
+AND PART.NAME_PART = "MOTOR"
+AND CAR.NAME = "KOMBI";
+
